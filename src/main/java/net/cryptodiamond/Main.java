@@ -24,6 +24,7 @@ public class Main implements DedicatedServerModInitializer {
                     "Sender TEXT NOT NULL," +
                     "Receiver TEXT NOT NULL," +
                     "Amount DECIMAL DEFAULT 0," +
+                    "Time DATETIME DEFAULT CURRENT_TIMESTAMP," +
                     "FOREIGN KEY(Sender) REFERENCES Accounts(UUID)," +
                     "FOREIGN KEY(Receiver) REFERENCES Accounts(UUID))");
             s.close();
