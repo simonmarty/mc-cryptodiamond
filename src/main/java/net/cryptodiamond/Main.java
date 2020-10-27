@@ -1,4 +1,4 @@
-package net.fabricmc.cryptodiamond;
+package net.cryptodiamond;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 

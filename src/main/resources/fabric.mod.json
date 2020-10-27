@@ -1,30 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "cryptodiamond",
   "version": "${version}",
 
   "name": "CryptoDiamond",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "Me!"
-  ],
+  "description": "CryptoDiamond (CD) is a diamond-equivalent currency. Players can pay, request and accept transactions to a CD bank account using simple commands.",
+  "authors": ["Skytram"],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/simonmarty",
+    "sources": "https://github.com/simonmarty/mc-cryptodiamond"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0+",
+  "icon": "assets/cryptodiamond/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "server": [
-      "net.fabricmc.cryptodiamond.Main"
-    ]
+    "server": ["net.cryptodiamond.Main"]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
+  "mixins": ["cryptodiamond.mixins.json"],
 
   "depends": {
     "fabricloader": ">=0.7.4",
