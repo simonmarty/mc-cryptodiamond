@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Main implements DedicatedServerModInitializer {
+public class Server implements DedicatedServerModInitializer {
 
     @Override
     public void onInitializeServer() {
@@ -17,7 +17,6 @@ public class Main implements DedicatedServerModInitializer {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:sqlite:cryptodiamond.db");
-            System.out.println("Opened Database successfully!");
             Statement s = connection.createStatement();
             s.executeUpdate("CREATE TABLE Accounts ( ID INT PRIMARY KEY NOT NULL, UUID TEXT NOT NULL, Balance DECIMAL DEFAULT 0)");
             s.executeUpdate("CREATE TABLE Transactions (ID INT PRIMARY KEY NOT NULL," +
@@ -33,10 +32,5 @@ public class Main implements DedicatedServerModInitializer {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
-
-
-        System.out.println("Hello Fabric world!");
-
-
     }
 }
