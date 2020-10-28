@@ -1,7 +1,6 @@
 package net.cryptodiamond;
 
 import com.mojang.brigadier.Command;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.tree.LiteralCommandNode;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
