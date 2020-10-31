@@ -18,8 +18,8 @@ public class Server implements DedicatedServerModInitializer {
         try {
             Connection connection = DriverManager.getConnection("jdbc:sqlite:cryptodiamond.db");
             Statement s = connection.createStatement();
-            s.executeUpdate("CREATE TABLE Accounts ( ID INT PRIMARY KEY NOT NULL, UUID TEXT NOT NULL, Balance DECIMAL DEFAULT 0)");
-            s.executeUpdate("CREATE TABLE Transactions (ID INT PRIMARY KEY NOT NULL," +
+            s.executeUpdate("CREATE TABLE IF NOT EXISTS Accounts ( ID INT PRIMARY KEY NOT NULL, UUID TEXT NOT NULL, Balance DECIMAL DEFAULT 0)");
+            s.executeUpdate("CREATE TABLE IF NOT EXISTS Transactions (ID INT PRIMARY KEY NOT NULL," +
                     "Sender TEXT NOT NULL," +
                     "Receiver TEXT NOT NULL," +
                     "Amount DECIMAL DEFAULT 0," +
