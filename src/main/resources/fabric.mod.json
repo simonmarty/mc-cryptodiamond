@@ -15,16 +15,11 @@
   "icon": "assets/cryptodiamond/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "net.cryptodiamond.Client"
-    ],
-    "server": [
+    "main": [
       "net.cryptodiamond.Server"
     ]
   },
-  "mixins": [
-    "cryptodiamond.mixins.json"
-  ],
+  "mixins": [],
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
