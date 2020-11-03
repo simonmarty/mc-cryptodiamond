@@ -23,9 +23,9 @@ public class Server implements ModInitializer {
 
             dispatcher.register(CommandManager.literal("cryptodiamond")
                     .then(CommandManager.literal("balance").redirect(root).executes(balanceCommand))
-                    .then(CommandManager.literal("hasDiamonds").redirect(root).executes(hasDiamondsCommand))
                     .then(CommandManager.literal("deposit").redirect(root).executes(depositCommand))
                     .then(CommandManager.literal("withdraw").redirect(root).executes(withdrawCommand))
+                    .then(CommandManager.literal("send").redirect(root).executes(sendCommand))
             );
         });
         setupDB();
